@@ -1,47 +1,49 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Regression Task 2020II.aux
-I found no \bibdata command---while reading file Regression Task 2020II.aux
-I found no \bibstyle command---while reading file Regression Task 2020II.aux
-You've used 4 entries,
-            0 wiz_defined-function locations,
-            91 strings with 602 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+The style file: unsrt.bst
+Database file #1: biblio.bib.bib
+Warning--I didn't find a database entry for "Helton2003"
+Warning--empty publisher in Forrester2008
+You've used 3 entries,
+            1791 wiz_defined-function locations,
+            468 strings with 4066 characters,
+and the built_in function-call counts, 697 in all, are:
+= -- 63
+> -- 27
+< -- 1
++ -- 10
+- -- 7
+* -- 41
+:= -- 112
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 4
+duplicate$ -- 33
+empty$ -- 67
+format.name$ -- 7
+if$ -- 155
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
+int.to.str$ -- 3
+missing$ -- 4
+newline$ -- 18
+num.names$ -- 3
+pop$ -- 12
+preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 0
+skip$ -- 16
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 44
+swap$ -- 8
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+warning$ -- 1
+while$ -- 8
+width$ -- 4
+write$ -- 33
+(There were 2 warnings)
