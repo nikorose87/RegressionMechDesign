@@ -1,8 +1,8 @@
 # Regression task for Intelligence Systems
 
-Regression tasks in Artificial Intelligence are not common, they are being used in fields as Finance, Surrogate Modelling \cite{Forrester2008} and Sensitivity Analysis \cite{Iooss2015}. This time your work will be focused in design, especifically, design of transtibial (Ankle-foot) prosthesis.
+Regression tasks in Artificial Intelligence are not common, they are being used in fields as Finance, Surrogate Modelling [Forrester2008] and Sensitivity Analysis [Iooss2015]. This time your work will be focused on design, especifically, design of transtibial (Ankle-foot) prosthesis.
 
-The Design Variables in prosthesis have been studied along decades. Those variables can be grouped in the following according to \cite{Hansen2016}:
+The Design Variables in prosthesis have been studied along decades. Those variables can be grouped in the following according to [Hansen2016]:
 
 - Siffness/Flexibility.
 - Damping.
@@ -15,12 +15,7 @@ The half part of the course will do the design focused on the prosthesis stiffne
 
 As it was explained, there are two datasets, those are simulations already performed with a Latin Hyper Cube (LHS) experiment \cite{Helton2003} design. The first one is about the influence of the thickness variation with respect to the outputs. For thickness 120 simulations were run, varying the thickness on different locations of the prosthesis. The following figure \ref{fig:thickness} explains how thickness is being varied along the device. In total, there are twelve dimensions as features for the dataset.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.25\textwidth]{Thickness_variationAF.png}
-    \caption{two different samples with different thickness on each dimension, this was performed with a LHS technique.}
-    \label{fig:thickness}
-\end{figure}
+![image1](Thickness_variationAF.png)
 
 
 
@@ -157,13 +152,7 @@ The dimensions are given in mm.
 
 On the other hand, we have manipulated the foot shape due to the control points in the cartesian space. The following figure indicates which dimension corresponds to each point:
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.25\textwidth]{ShapeDimensionsAF.png}
-    \caption{Indicative dimensions for every control point in the Ankle-foot saggital shape. Non DV means: Non Design Variable.}
-    \label{fig:shape}
-\end{figure}
-
+![image2](ShapeDimensionsAF.png)
 The respective dimensions of the dimensions mentioned above, are depicted in the following dataframe:
 
 
@@ -312,12 +301,7 @@ Similarly, dimension 8 will be evaluated with respect to the remaining 75% right
 
 Varying those points can give us many design shapes, as shown in Fig. \ref{fig:many_shapes}.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.25\textwidth]{shapesAF.png}
-    \caption{Six randomic designs generated through Latin Hypercupe Sampling.}
-    \label{fig:many_shapes}
-\end{figure}
+![image3](shapesAF.png)
 
 The unique point that does not work relative to the foot proportion are the dims 6 and 7. this point may vary either before or after the zero line, that is why those points are being controlled in mm. 
 
@@ -423,36 +407,28 @@ As you see in the data, there are two columns with names **Error_GRF** and **Err
 They were measured through reading raw data on each simulation. The desired output is the blue one. For the raw data we have applied a butterworth filter in order to smooth the real output and measure the error through the minimum Mean Square Error. See Fig \ref{fig:GRF_error} for more details
 
 
-\begin{figure}[H]
-\centerline{\includegraphics{ErrorGRF.png}}
-\caption{\label{fig:GRF_error} Ground Reaction Forces trajectories in one sample, representing the target as blue color, the pure data (orange) and the filtered results (green) are the outputs of the simulations.}
-\end{figure}
+![image4](ErrorGRF.png)
 
 - Errors in moments.
 
-One of the most important outputs is the torque generated in the ankle joint. The main purpose is to replicate a natural ankle dynamics with the prosthesis thus we are comparing the torque generated in the prosthesis (blue) with a target (green line). therefore, we also have measured the MSE between both functions, see Fig. \ref{fig:Mom_error}.
-\begin{figure}[H]
-\centerline{\includegraphics{ErrorMom.png}}
-\caption{\label{fig:Mom_error} Regression lines of the moment generated (blue) vs a torque dynamic reference.}
-\end{figure}
+One of the most important outputs is the torque generated in the ankle joint. The main purpose is to replicate a natural ankle dynamics with the prosthesis thus we are comparing the torque generated in the prosthesis (blue) with a target (green line). therefore, we also have measured the MSE between both functions, see Fig. 
+
+![image5](ErrorMom.png)
+
 
 ### Range of Motion
 
 Another important feature is to see how compliant is the prosthesis, this is measured through the Range of Motion (RoM), which is obtained through the maximum amplitude in the angle dynamic behavior, as shown in Fig \ref{fig:angle_RoM}, the units are degrees.
 
-\begin{figure}[H]
-\centerline{\includegraphics{angle_RoM.png}}
-\caption{\label{fig:angle_RoM} Range of Motion measured in ankle-foot prosthesis.}
-\end{figure}
+![image6](angle_RoM.png)
+
 
 ### Mechanical work
 
 The remaining output is the mechanical work, this is obtained through the loop integral of the moment respect to the angle. In other words, is the area of the closed loop of the moment-angle plot. See Fig \ref{fig:MechWork}
 
-\begin{figure}[H]
-\centerline{\includegraphics{QS.png}}
-\caption{\label{fig:MechWork} Angle-Moment plot of a normal subject (blue dots) vs a prosthesis angle-moment shape. The Mechanical work is obtained through the integral of close loop of those trajectories.}
-\end{figure}
+![image7](QS.png)
+
 
 ## Data analysis
 
@@ -589,7 +565,7 @@ Your goal is to design the best prosthesis as possible with the given data, buil
 ## Activities
 
 This is an individual task, your job is the following:
-1. Perform the best ML algorithm that fits the Test set greater than 0.92. Remind the advantages and disadvantages of each algorithm. For instance, one disadvantage of RF is that they cannot predict values greater or lower than the values implied in the dataset, however they provide good scores whatever the metric implemented. On the other hand, SVM is able to predict values higher than the bounds, however scaling the data is needed to provide coherent results. (40% of the grade)
+1. Perform the best ML algorithm that fits the Test set score greater than 0.92. Remind the advantages and disadvantages of each algorithm. For instance, one disadvantage of RF is that they cannot predict values greater or lower than the values implied in the dataset, however they provide good scores whatever the metric implemented. On the other hand, SVM is able to predict values higher than the bounds, however scaling the data is needed to provide coherent results. (40% of the grade)
 2. Perform Sensitivity analysis procedure: Do this analysis with the following techniques: [Permutation importance, feature importance](https://scikit-learn.org/dev/auto_examples/inspection/plot_permutation_importance.html) and one the [Salib packages](https://salib.readthedocs.io/en/latest/). Compare the results and give conclusions. (20% of the grade)
 3. Generate an estrategy for obtaining the best values. For instance, you can set a [meshgrid](https://stackoverflow.com/questions/36013063/what-is-the-purpose-of-meshgrid-in-python-numpy) with numpy and predict all possible configurations, later you can filter the best. After that, compare if you have obtained higher values for the goals and preserving the constrains. (10% of the grade)
 4. Provide 5 new samples, I will simulate your dimensions and see how far are from the predicted answers (10% of the grade).
@@ -604,5 +580,7 @@ Regards
 [<a id="cit-Iooss2015" href="#call-Iooss2015">Iooss2015</a>] Iooss Bertrand and Lema{\^{i}}tre Paul, ``_Uncertainty Management in Simulation-Optimization of Complex Systems_'', Operations Research/ Computer Science Interfaces Series, vol. 59, number , pp. 101--122,  2015.  [online](http://www.researchgate.net/publication/261512645_A_review_on_global_sensitivity_analysis_methods)
 
 [<a id="cit-Hansen2016" href="#call-Hansen2016">Hansen2016</a>] Hansen Andrew and Starker Felix, ``_Prosthetic Foot Principles and Their Influence on Gait_'', Handbook of Human Motion, vol. , number , pp. 1--15,  2016.
+
+[<a id="cit-Helton2003" href="#call-Helton2003">Helton2003</a>] Helton J. C. and Davis F. J., ``_Latin hypercube sampling and the propagation of uncertainty in analyses of complex systems_'', Reliability Engineering and System Safety, vol. 81, number 1, pp. 23--69,  2003.
 
 
