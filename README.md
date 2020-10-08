@@ -1,4 +1,4 @@
-# Regression task for Intelligence Systems
+# Surrogate modelling for Ankle foot prosthesis
 
 Regression tasks in Artificial Intelligence are not common, they are being used in fields as Finance, Surrogate Modelling [Forrester2008] and Sensitivity Analysis [Iooss2015]. This time your work will be focused on design, especifically, design of transtibial (Ankle-foot) prosthesis.
 
