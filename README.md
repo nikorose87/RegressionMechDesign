@@ -1,6 +1,6 @@
 # Surrogate modelling for Ankle foot prosthesis
 
-Regression tasks in Artificial Intelligence are not common, they are being used in fields as Finance, Surrogate Modelling [Forrester2008] and Sensitivity Analysis [Iooss2015]. This time your work will be focused on design, especifically, design of transtibial (Ankle-foot) prosthesis.
+Regression tasks in Artificial Intelligence are not common, they are being used in fields as Finance, Surrogate Modelling [Forrester2008] and Sensitivity Analysis [Iooss2015].
 
 The Design Variables in prosthesis have been studied along decades. Those variables can be grouped in the following according to [Hansen2016]:
 
@@ -561,17 +561,6 @@ Your goal is to design the best prosthesis as possible with the given data, buil
 - The least Moment error as possible.
 - The Maximum Mechanical work as possible.
 
-
-## Activities
-
-This is an individual task, your job is the following:
-1. Perform the best ML algorithm that fits the Test set score greater than 0.92. Remind the advantages and disadvantages of each algorithm. For instance, one disadvantage of RF is that they cannot predict values greater or lower than the values implied in the dataset, however they provide good scores whatever the metric implemented. On the other hand, SVM is able to predict values higher than the bounds, however scaling the data is needed to provide coherent results. (40% of the grade)
-2. Perform Sensitivity analysis procedure: Do this analysis with the following techniques: [Permutation importance, feature importance](https://scikit-learn.org/dev/auto_examples/inspection/plot_permutation_importance.html) and one the [Salib packages](https://salib.readthedocs.io/en/latest/). Compare the results and give conclusions. (20% of the grade)
-3. Generate an estrategy for obtaining the best values. For instance, you can set a [meshgrid](https://stackoverflow.com/questions/36013063/what-is-the-purpose-of-meshgrid-in-python-numpy) with numpy and predict all possible configurations, later you can filter the best. After that, compare if you have obtained higher values for the goals and preserving the constrains. (10% of the grade)
-4. Provide 5 new samples, I will simulate your dimensions and see how far are from the predicted answers (10% of the grade).
-5. Presentation and visualization: Remind that good plots and coherent conslusions makes your work stronger (20% of the grade)
-
-Regards
 
 # References
 
